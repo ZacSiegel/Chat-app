@@ -17,14 +17,36 @@
 body {
     font-family: 'Open sans', sans-serif;
     font-size: 16px;
-    background: #2e2e2e;
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 20px;
+}
+
+h1,
+h2 {
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
 }
 
 h1,
 h2,
 h3 {
     font-weight: 300;
+}
+
+h2,
+h3 {
+    letter-spacing: 2px;
 }
 
 div::-webkit-scrollbar {
@@ -53,31 +75,42 @@ a {
 .btn {
     cursor: pointer;
     padding: 5px 15px;
-    background: var(--light-color);
+    background: #29996a;
     color: #fff;
     border: 0;
     font-size: 17px;
     border-radius: 5px;
+
+    color: #48dd9f;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #48dd9f;
 }
 
 .btn:hover {
     color: #48dd9f;
-    background-color: rgb(68, 68, 68);
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid #48dd9f;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(150, 29, 236, 0.493);
+    transition: all 0.2s ease-in-out;
 }
 
 /* Chat Page */
 
 .chat-container {
     max-width: 1100px;
-    background: var(--dark-color-a);
     margin: 30px auto;
     overflow: hidden;
-    padding: 0 1rem;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
+
 }
 
 .chat-header {
-    background: var(--dark-color-a);
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -93,10 +126,12 @@ a {
 }
 
 .chat-sidebar {
-    background-color: rgb(48, 48, 48);
     color: #fff;
-    padding: 20px 20px 60px;
+    padding: 1rem;
     overflow-y: scroll;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
+
 }
 
 .chat-sidebar h2 {
@@ -118,15 +153,24 @@ a {
     padding: 30px;
     max-height: 500px;
     overflow-y: scroll;
-    background-color: rgb(48, 48, 48);
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
+
 }
 
 .chat-messages .message {
     padding: 10px;
     margin-bottom: 15px;
-    background-color: var(--light-color);
-    border-radius: 5px;
+    /* background-color: var(--light-color); */
+    /* border-radius: 5px; */
     color: #fff;
+
+    color: #48dd9f;
+    text-shadow:
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
 }
 
 .chat-messages .message .meta {
@@ -145,7 +189,8 @@ a {
 
 .chat-form-container {
     padding: 20px 30px;
-    background-color: var(--dark-color-a);
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .chat-form-container form {
@@ -157,10 +202,11 @@ a {
     padding: 5px;
     height: 40px;
     flex: 1;
-    background: rgb(68, 68, 68);
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3);
     border: none;
     margin-right: 1rem;
-    color: rgb(194, 194, 194);
+    color: rgb(252, 252, 252);
 }
 
 /* Join Page */
@@ -174,14 +220,16 @@ a {
 .join-header {
     text-align: center;
     padding: 20px;
-    background: var(--dark-color-a);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .join-main {
     padding: 30px 40px;
-    background: var(--dark-color-b);
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .join-main p {
@@ -202,9 +250,11 @@ a {
     padding: 5px;
     height: 40px;
     width: 100%;
-    background-color: var(--dark-color-a);
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.8);
     border: none;
     color: rgb(184, 184, 184);
+    border-radius: 10px;
 }
 
 .join-main select {
@@ -212,9 +262,13 @@ a {
     padding: 5px;
     height: 40px;
     width: 100%;
-    background-color: var(--dark-color-a);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.8);
     border: none;
     color: rgb(184, 184, 184);
+    border-radius: 10px;
 }
 
 .join-main .btn {
