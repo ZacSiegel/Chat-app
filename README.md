@@ -8,3 +8,5 @@ Planned objectives:
 1. Make improvements to UI and work on mobile UX
 2. Integrate database to store chat messages
 3. Add users with authentication
+
+Demo can be viewed at https://zac-siegel-chat-app.herokuapp.com/
